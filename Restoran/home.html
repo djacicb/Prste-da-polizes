@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Prste da polizes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="home.css" />
+    <script src="main.js"></script>
+
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="grid-item">
+            <h4>Pavle Pavlović</h4>
+            <h4> Restoran <span>"Prste da poližeš"</span>
+            </h4>
+            <h4>i ostale delatnosti</h4>
+            <img class="logo" src="Slike/logo-white.png" alt="logo">
+        </header>
+        <div class="grid-item nav">
+            <div><a href="home.html">Home</a></div>
+            <div><a href="restoran.html" target="_blank">Restoran</a></div>
+            <div><a href="radnovreme.html" target="_blank">Radno vreme</a></div>
+            <div><a href="omeni.html" target="_blank">O meni</a></div>
+        </div>
+
+        <main class="grid-item" id="home">
+            <div id=pocetak></div>
+            <h2>Dobrodošli</h2>
+            <p id="dob">Dolor sit amet consectetur adipisicing elit. Quam tenetur facere harum tempore, ut temporibus.</p>
+
+            <div id="slajder">
+                <img class="mySlides" src="Slike/rest1.jpg" alt="restoran" style="width:100%">
+                <img class="mySlides" src="Slike/rest2.jpg" alt="restoran" style="width:100%">
+                <img class="mySlides" src="Slike/rest3.jpg" alt="restoran" style="width:100%">
+            </div>
+
+            <script>
+                var myIndex = 0;
+                carousel();
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) { myIndex = 1 }
+                    x[myIndex - 1].style.display = "block";
+                    setTimeout(carousel, 3000);
+                }
+            </script>
+
+            <video src="Video/restoran.mp4" controls poster="Slike/rest2.jpg">
+            </video>
+        </main>
+
+        <aside class="grid-item adds">
+            <div>
+                <a href="http://www.jolly.rs/" target="_blank">
+                    <img src="Slike/jolly.jpg" alt="Jolly" > </a>
+                <div>
+                    <a href="http://www.jolly.rs/" target="_blank">
+                        Jolly Travel </a>
+                </div>
+            </div>
+
+            <div>
+                <a href="https://www.djaksport.com/" target="_blank">
+                    <img src="Slike/djak.jpg" alt="Djak sport"> </a>
+                <div>
+                    <a href="https://www.djaksport.com/" target="_blank">
+                        Đak sport </a>
+                </div>
+            </div>
+
+            <div>
+                <a href="http://novakdjokovic.com/" target="_blank">
+                    <img src="Slike/novak.jpg" alt="Nole"> </a>
+                <div><a href="http://novakdjokovic.com/" target="_blank">
+                        Novak Đoković </a>
+                </div>
+            </div>
+        </aside>
+
+        <footer class="grid-item">
+            <address>
+                Ulica: Gladnih 13 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Telefon: 011/555-333
+            </address>
+            <a href="#pocetak">Povratak na vrh stranice</a>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+#home { display: block;
+    overflow-y:scroll;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    text-shadow:2px 1px 1px black;}
+
+#slajder, video { 
+    width: 100%;
+    padding: 20px; }
+
+#dob { padding: 7px; }

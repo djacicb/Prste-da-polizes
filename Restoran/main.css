@@ -1,0 +1,89 @@
+*{ box-sizing: border-box;
+  margin: 0; }
+
+html, body { height: 100%;
+    background-color: rgb(218, 245, 243); }
+
+.grid-container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 30%;
+    grid-template-rows: 17% 7% 60%;
+    grid-gap: 10px;
+    padding: 10px; }
+    
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; font-size:1.8em; }   
+    
+header, .nav, footer {
+        grid-column: 1/3; }
+
+header, footer, aside, main { flex-direction: column; }
+
+header, footer { position: relative;
+    background-image:radial-gradient(#7FD2FF, #096A9F);}
+/* background-image:linear-gradient(#096A9F, #7FD2FF); */
+
+span { font-family: 'Dancing Script', cursive; 
+font-size: 1.3em;
+text-shadow:2px 1px 1px black;}
+
+h4, address { 
+    text-shadow:2px 1px 1px black;}
+
+.logo { position: absolute; 
+    margin-left: 40%; 
+    height: 80%;
+    animation: logo 4s linear;
+    animation-fill-mode: forwards; }
+
+@keyframes logo {
+    0% {opacity: 0}
+    100% {opacity: 1 } }
+
+.adds, .nav { justify-content: space-around; }
+   
+.adds>div { width: 90%;
+       height: 28%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       align-self: flex-end; }    
+
+.adds a {text-decoration: none;
+       color: white;
+       text-shadow:2px 1px 1px black; } 
+
+.adds>div>a>img { width: 100%;
+      height: 100%; 
+      border: 1px solid #096A9F;}
+
+.adds>div>div { position: absolute; 
+    background-color: rgb(128, 199, 223);
+    opacity: .8;
+    width: 26.5%;
+    text-align: center; }
+
+.nav a, footer a { font-size: 0.8em;
+    text-decoration: none;
+    padding: 5px 10px;
+    color: gray; }
+
+.nav a:hover, footer a:hover { background-color: #555;
+        color: white; }
+
+@media only screen and (max-width: 600px) {
+    .grid-item { grid-column: 1/3;
+        font-size:1.3em;}
+    .grid-container {
+        grid-template-rows: 15% 7% 40% 20%; }
+    aside { flex-direction: row; } 
+    .adds>div { width: 30%;
+        height: 40%; }
+    .adds>div>div { width: 28.8%; } }
+
+/*@media only screen and (min-width: 1400px) {
+    .grid-item { font-size: 2.3em;} }*/

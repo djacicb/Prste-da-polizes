@@ -1,0 +1,33 @@
+.sadrzaj{ margin:30px;
+    text-align: center; 
+    background-image:radial-gradient(#7FD2FF, #096A9F); }
+.sadrzaj a{padding: 18px;
+    text-decoration: none;
+    color: white;
+    text-shadow:2px 1px 1px black;
+    letter-spacing: -1px; }
+
+
+h1{margin: 50px 30px 15px;  color: silver;
+    text-shadow:2px 1px 1px black;}
+.unl{font-family: 'Unlock', cursive;}
+.osw{font-family: 'Oswald', sans-serif;} 
+
+p{font-size: 20px; text-align: justify; 
+    line-height: 1.3em; margin: 0px 30px 70px;
+    color: gray;}
+
+
+#meni { display: block;
+    overflow-y:scroll; }
+
+ul { color:gray;
+    list-style-type: circle;
+    padding-top: 25px; }
+
+ul ul { font-size: 0.8em;
+    list-style-type: none;
+    padding: 10px; 
+    padding-bottom: 40px; }
+
+ul ul li { padding: 7px; }
